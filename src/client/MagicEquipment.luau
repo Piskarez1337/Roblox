@@ -8,6 +8,15 @@ local Core = require(shared.Config)
 local Art = require(script.Parent.MagicArt)
 local Geometry = require(script.Parent.MagicGeometry)
 local Books = require(script.Parent.GrimoireManager)
+local BoneArt = require(script.Parent.BoneAwakeningArt)
+-- Only Bone replaces the old compound art; other magic classes are untouched.
+local function cloneArmorPiece(magicId, piece)
+	if magicId == "Bone" then
+		local generated = BoneArt.Build(piece)
+		return generated and Art:Track(generated) or nil
+	end
+	return Art:Clone(magicId .. piece)
+end
 local Equipment = { Actors = {} }
 local bodies = { "UpperTorso", "LowerTorso", "Head", "LeftUpperArm", "RightUpperArm", "LeftLowerLeg", "RightLowerLeg" }
 local function reveal(model, alpha)
@@ -60,16 +69,17 @@ function Equipment:Armor(entry, character)
 	local id = entry.Magic
 	for _, name in bodies do
 		local body = character:FindFirstChild(name)
-		local model = body and Art:Clone(id .. "Armor" .. name)
+		local model = body and cloneArmorPiece(id, "Armor" .. name)
 		if model then model.Parent = self.Folder; Art:Attach(model, body, CFrame.identity, false); table.insert(entry.Armor, model) end
 	end
 	local torso = character:FindFirstChild("UpperTorso")
 	if torso then
 		for _, side in { -1, 1 } do
-			local model = Art:Clone(id .. "Wing" .. (side == -1 and "Left" or "Right"))
+			local model = cloneArmorPiece(id, "Wing" .. (side == -1 and "Left" or "Right"))
 			if model then
 				model.Parent = self.Folder
-				local motor = Art:Attach(model, torso, CFrame.new(side * .3, .3, .7), true)
+				local hingeOffset = id == "Bone" and CFrame.new(side * .72, .48, .64) or CFrame.new(side * .3, .3, .7)
+				local motor = Art:Attach(model, torso, hingeOffset, true)
 				table.insert(entry.Armor, model)
 				table.insert(entry.Wings, { Motor = motor, Side = side })
 			end
