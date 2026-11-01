@@ -1,5 +1,5 @@
 {
-  "name": "BlackClover_Stage1",
+  "name": "BlackClover_Magic",
   "tree": {
     "$className": "DataModel",
     "Workspace": {
@@ -10,10 +10,13 @@
       "BlackClover": {
         "$className": "Folder",
         "Shared": { "$path": "src/shared" },
+        "ArtTemplates": { "$path": "assets/magic" },
+        "ArtMeshes": { "$className": "Folder" },
         "Remotes": {
           "$className": "Folder",
           "Action": { "$className": "RemoteEvent" },
-          "FX": { "$className": "RemoteEvent" }
+          "FX": { "$className": "RemoteEvent" },
+          "MagicFX": { "$className": "RemoteEvent" }
         }
       }
     },
@@ -22,9 +25,11 @@
       "Actors": {
         "$className": "Folder",
         "Dummy": { "$path": "assets/Dummy.rbxmx" },
-        "Enemy": { "$path": "assets/Enemy.rbxmx" }
+        "Enemy": { "$path": "assets/Enemy.rbxmx" },
+        "Golem": { "$path": "assets/Golem.rbxmx" }
       },
-      "Stage1Tests": { "$path": "src/tests/Stage1Tests.luau" }
+      "Stage1Tests": { "$path": "src/tests/Stage1Tests.luau" },
+      "MagicSystemTests": { "$path": "src/tests/MagicSystemTests.luau" }
     },
     "StarterPlayer": {
       "$properties": {

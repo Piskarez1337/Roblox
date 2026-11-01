@@ -1,6 +1,7 @@
 --!nonstrict
 local Players = game:GetService("Players")
 local Config = require(game:GetService("ReplicatedStorage").BlackClover.Shared.Config)
+local MagicConfig = require(game:GetService("ReplicatedStorage").BlackClover.Shared.MagicConfig)
 local HUD = { Health = 1, Mana = 1, Guard = 1 }
 local ink = Color3.fromRGB(12, 23, 29)
 local pale = Color3.fromRGB(230, 237, 227)
@@ -45,7 +46,7 @@ function HUD:Start()
 	local mark = panel(canvas, UDim2.fromOffset(24, 18), UDim2.fromOffset(270, 58))
 	label(mark, "♣", UDim2.fromOffset(14, 4), UDim2.fromOffset(42, 46), 38, gold)
 	label(mark, "B L A C K   C L O V E R", UDim2.fromOffset(65, 9), UDim2.fromOffset(195, 20), 13, pale)
-	label(mark, "ТРЕНИРОВОЧНЫЙ ДВОР  /  01", UDim2.fromOffset(65, 31), UDim2.fromOffset(195, 14), 9, muted)
+	label(mark, "ДВОР ХРАНИТЕЛЕЙ  /  ГРИМУАРЫ", UDim2.fromOffset(65, 31), UDim2.fromOffset(195, 14), 9, muted)
 	local status = panel(canvas, UDim2.new(0, 24, 1, -24), UDim2.fromOffset(320, 200), Vector2.new(0, 1))
 	self.Identity = label(status, "УРОВЕНЬ 01  /  БЕЗ МАГИИ", UDim2.fromOffset(18, 12), UDim2.fromOffset(284, 22), 11, gold)
 	self.HPBar = bar(status, 45, "ЗДОРОВЬЕ", Color3.fromRGB(217, 122, 115), 12)
@@ -65,8 +66,8 @@ function HUD:Start()
 	label(actions, "8 маны · 1.15 с", UDim2.fromOffset(185, 53), UDim2.fromOffset(140, 18), 10, muted)
 	local help = panel(canvas, UDim2.new(1, -24, 1, -24), UDim2.fromOffset(250, 124), Vector2.new(1, 1))
 	label(help, "УПРАВЛЕНИЕ", UDim2.fromOffset(16, 12), UDim2.fromOffset(218, 18), 10, gold)
-	label(help, "Shift  Бег     Space  Прыжок\nF  Блок       Q  Рывок\nЛКМ  Удар / удерживать для серии", UDim2.fromOffset(16, 38), UDim2.fromOffset(220, 67), 11, pale)
-	self.Hint = label(canvas, "Манекены — впереди. Часовые — у дальних ворот. Источник восстанавливает HP и ману.",
+	label(help, "Shift Бег · Space Прыжок · F Блок\nЛКМ Комбо · Q Рывок · M Магия\nR Полёт · Space/Ctrl Вверх/вниз", UDim2.fromOffset(16, 38), UDim2.fromOffset(220, 67), 11, pale)
+	self.Hint = label(canvas, "M — выбор магии · Z/X/C/V — способности · G — пробуждение. Источник восстанавливает HP и ману.",
 		UDim2.new(0.5, 0, 0, 26), UDim2.fromOffset(670, 42), 12, pale)
 	self.Hint.AnchorPoint = Vector2.new(0.5, 0)
 	self.Hint.TextXAlignment = Enum.TextXAlignment.Center
@@ -106,7 +107,7 @@ function HUD:Step(dt)
 	self.HPBar.Title.Text = string.format("ЗДОРОВЬЕ                                  %d / %d", math.ceil(health), maxHealth)
 	self.MPBar.Title.Text = string.format("МАНА                                          %d / %d", math.floor(mana), maxMana)
 	self.GuardBar.Title.Text = string.format("ЗАЩИТА                                      %d / %d", math.floor(guard), Config.Combat.GuardMax)
-	self.Identity.Text = string.format("УРОВЕНЬ %02d  /  БЕЗ МАГИИ", character:GetAttribute("Level") or 1)
+	self.Identity.Text = string.format("УРОВЕНЬ %02d  /  %s", character:GetAttribute("Level") or 1, string.upper(character:GetAttribute("MagicName") or "Без магии"))
 	local cooldown = math.max(0, (character:GetAttribute("DashReady") or 0) - now)
 	self.Dash.Text = cooldown > 0 and string.format("Q  %.1f с", cooldown) or "Q  РЫВОК"
 	self.Dash.TextColor3 = cooldown > 0 and muted or mint
@@ -115,6 +116,9 @@ function HUD:Step(dt)
 	local stunned = (character:GetAttribute("StunUntil") or 0) > now
 	self.State.Text = stunned and "ОГЛУШЕНИЕ" or (character:GetAttribute("Blocking") and "БЛОК · ЗАЩИТА СПЕРЕДИ"
 		or (character:GetAttribute("Sprinting") and "СПРИНТ" or "ГОТОВ К БОЮ"))
+	local class = MagicConfig.Classes[character:GetAttribute("MagicId") or ""]
+	if (character:GetAttribute("SuppressedUntil") or 0) > now then self.State.Text = "МАГИЯ ПОДАВЛЕНА"
+	elseif character:GetAttribute("Awakened") and class then self.State.Text = class.Awakening .. " · −" .. class.Drain .. "/с" end
 	self.Dead.Visible = health <= 0
 end
 

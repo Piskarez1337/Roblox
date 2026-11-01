@@ -1,23 +1,15 @@
-# Black Clover RPG — Stage 1
+# Black Clover RPG — Magic 0.2
 
-Первая основа для Roblox Studio: собственный R15, ходьба и спринт, прыжок, рывок, четыре рукопашных удара, блок, HP, мана, HUD и тренировочная арена.
+Extension of the existing Roblox prototype: seven classes, 28 base spells, 16 awakened spells, grimoires, server mana/combat/clashes, passives, a fighting golem, and four transformations. Original arena, R15 movement, M1, dash, guard, HUD and NPCs are preserved.
 
-- [Готовый place — BlackClover_Stage1.rbxlx](dist/BlackClover_Stage1.rbxlx?raw=true)
-- [Полный архив с исходниками](dist/BlackClover_Stage1.zip?raw=true)
-- [Установка и проверки в Roblox Studio](README_RU.md)
-- [Отчёт о выполненных проверках](TEST_REPORT_RU.md)
+- [Русская инструкция и ограничения](README_RU.md)
+- [Ready-to-open Roblox place](dist/BlackClover_Magic.rbxlx) — download the raw file, then **File → Open from File → Play** in Studio.
+- [Full package](dist/BlackClover_Magic.zip)
+- [44 abilities](docs/MAGIC_ABILITIES_RU.md) · [Studio checks](docs/STUDIO_TESTS_RU.md)
+- [Original OBJ/MTL import sources](meshes/README_RU.md) · [Validation report](TEST_REPORT_RU.md)
 
-Скачайте place, откройте его через **Roblox Studio → File → Open from File…** и нажмите **Play / F5**. Ручная вставка скриптов и установка Rojo для запуска place не требуются.
+Controls: **M** class selection, **Z/X/C/V** spells, **G** awakening, **R** short flight in awakened Wind/Anti; original **M1 / Q / F / Shift / Space** remain. Exact awakening drain is Water 1, Bone 5, Wind 7, Anti 7 mana/s, with no fixed transformation lifetime.
 
-**Проверено:** компиляция 17 Luau-файлов, 36 проверок чистых правил, сборка Rojo, совпадение 16 встроенных скриптов с исходниками и соединения трёх R15-ригов. **Play Mode и мультиплеер здесь не запускались:** среда не содержит Roblox Studio. В place включён модуль проверок для запуска на сервере Studio.
+Offline validation: 44 Luau sources compile, 596 rule assertions pass, Rojo builds 42 embedded scripts, four R15 rigs and 43 script-free art models. **Roblox Studio and multiplayer Play Mode have not been run in this environment.** Uploaded detailed MeshPart assets and reference-level visuals remain outstanding; current compound models and real OBJ/MTL sources provide the working art foundation.
 
-Магии, гримуары, пробуждения, воздушные комбо и spell clash относятся к следующим этапам и пока не реализованы. Эта ветка сохраняет и упаковывает уже созданный первый этап.
-
-Для разработчика с Luau, Rojo и Python в PATH:
-
-```sh
-python tools/check.py
-python tools/package.py
-```
-
-Исходники находятся в `src/`, модели — в `assets/`, готовые файлы — в `dist/`. Архив включает `BlackClover_Stage1.rbxlx`, инструкции и папку `source/`. Контрольные суммы файлов дистрибутива записаны в `dist/SHA256SUMS.txt`.
+Build: `python tools/check.py` then `python tools/package.py` with Luau 0.745 / Rojo 7.7.1 in PATH. Historical Stage 1 place/ZIP are retained.

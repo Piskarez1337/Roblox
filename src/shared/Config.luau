@@ -1,7 +1,7 @@
 --!strict
 -- All balance values for stage 1. Seconds, studs, HP, mana.
 return table.freeze({
-	Version = "0.1.0 / Stage 1",
+	Version = "0.2.0 / Magic",
 	Player = { Health = 120, Mana = 100, ManaPerLevel = 10, ManaRegen = 7,
 		ManaRegenDelay = 0.75, HealthRegen = 4, HealthRegenDelay = 7 },
 	Movement = { Walk = 16, Sprint = 27, Block = 7, Jump = 48,

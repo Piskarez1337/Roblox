@@ -128,6 +128,10 @@ function VFX:Handle(kind, model, position, value, source, index)
 	if kind == "Swing" then
 		local definition = Config.Combat.Attacks[value]
 		if not definition then return end
+		if model:GetAttribute("MeleeProfile") and model:GetAttribute("MeleeProfile") ~= "Fist" then
+			self:Sound("Swing", model:FindFirstChild("HumanoidRootPart"), .85)
+			return
+		end
 		local entry = self:Attach(model)
 		if not entry then return end
 		local trail = entry.Fists[(value == 2 or value == 4) and 2 or 1]

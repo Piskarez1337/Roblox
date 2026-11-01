@@ -11,6 +11,9 @@ local Rules = require(shared:WaitForChild("Rules"))
 local Animation = require(script.Parent:WaitForChild("AnimationController"))
 local VFX = require(script.Parent:WaitForChild("VFXController"))
 local HUD = require(script.Parent:WaitForChild("HUDController"))
+local MagicHUD = require(script.Parent:WaitForChild("MagicHUD"))
+local MagicEquipment = require(script.Parent:WaitForChild("MagicEquipment"))
+local MagicVFX = require(script.Parent:WaitForChild("MagicVFX"))
 local remotes = package:WaitForChild("Remotes")
 local action = remotes:WaitForChild("Action")
 local attackHeld, queuedUntil, nextAttack = false, 0, 0
@@ -20,6 +23,10 @@ local nextBlockTry = 0
 Animation:Start()
 VFX:Start()
 HUD:Start()
+MagicEquipment:Start()
+remotes:WaitForChild("MagicFX")
+MagicHUD:Start(HUD.Canvas, action, remotes)
+MagicVFX:Start(remotes.MagicFX)
 
 local function resetInput()
 	attackHeld, queuedUntil, nextAttack = false, 0, 0
@@ -30,10 +37,13 @@ local function resetInput()
 end
 
 local function attack(now)
+	if MagicHUD.Menu.Visible then return end
 	local character = localPlayer.Character
 	local humanoid = character and character:FindFirstChildOfClass("Humanoid")
 	if not humanoid or humanoid.Health <= 0 or now < nextAttack or blockHeld then return end
-	if (character:GetAttribute("StunUntil") or 0) > now or (character:GetAttribute("DashUntil") or 0) > now then return end
+	if (character:GetAttribute("StunUntil") or 0) > now or (character:GetAttribute("DashUntil") or 0) > now
+		or (character:GetAttribute("RootedUntil") or 0) > now
+		or (character:GetAttribute("CastSpell") ~= "" and (character:GetAttribute("CastEnd") or 0) > now) then return end
 	local index = Rules.nextCombo(character:GetAttribute("AttackIndex") or 0, character:GetAttribute("AttackStart") or 0,
 		now, Config.Combat.ComboReset)
 	-- The server confirms or rejects this cosmetic prediction. It never grants damage.
@@ -44,7 +54,7 @@ local function attack(now)
 end
 
 UserInputService.InputBegan:Connect(function(input, processed)
-	if processed or UserInputService:GetFocusedTextBox() then return end
+	if processed or UserInputService:GetFocusedTextBox() or MagicHUD.Menu.Visible then return end
 	if input.UserInputType == Enum.UserInputType.MouseButton1 then
 		attackHeld = true
 		queuedUntil = workspace:GetServerTimeNow() + 0.16
@@ -81,6 +91,7 @@ localPlayer.CharacterAdded:Connect(function()
 	HUD.CreatedAt = os.clock()
 end)
 localPlayer.CharacterRemoving:Connect(resetInput)
+MagicHUD.Menu:GetPropertyChangedSignal("Visible"):Connect(function() if MagicHUD.Menu.Visible then resetInput() end end)
 
 remotes:WaitForChild("FX").OnClientEvent:Connect(function(kind, ...)
 	if kind == "Rejected" then
@@ -112,6 +123,8 @@ RunService:BindToRenderStep("BlackCloverPresentation", Enum.RenderPriority.Camer
 		local t = os.clock() * 58
 		humanoid.CameraOffset = Vector3.new(math.sin(t) * VFX.Shake, math.cos(t * 1.17) * VFX.Shake * 0.65, 0)
 		local desired = character:GetAttribute("Sprinting") and humanoid.MoveDirection.Magnitude > 0 and 77 or 70
+		local age = workspace:GetServerTimeNow() - (character:GetAttribute("TransformStart") or 0)
+		if character:GetAttribute("Awakened") and age >= 0 and age < 2.4 then desired = 70 - math.sin(age / 2.4 * math.pi) * 11 end
 		camera.FieldOfView += (desired - camera.FieldOfView) * (1 - math.exp(-7 * dt))
 	end
 end)

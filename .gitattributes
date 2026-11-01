@@ -1,2 +1,6 @@
 assets/*.rbxmx linguist-generated=true
+assets/magic/*.rbxmx linguist-generated=true
+meshes/*.obj linguist-generated=true
+meshes/*.mtl linguist-generated=true
+meshes/manifest.json linguist-generated=true
 dist/* linguist-generated=true

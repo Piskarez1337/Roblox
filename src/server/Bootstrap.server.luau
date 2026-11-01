@@ -9,9 +9,11 @@ local Registry = require(script.Parent.Registry)
 local Movement = require(script.Parent.MovementSystem)
 local Combat = require(script.Parent.CombatSystem)
 local EnemyAI = require(script.Parent.EnemyAI)
+local Magic = require(script.Parent.MagicManager)
 local remotes = ReplicatedStorage.BlackClover.Remotes
 local request, fx = remotes.Action, remotes.FX
 local buckets, connections, fountains = {}, {}, {}
+Magic:Start(fx, remotes.MagicFX)
 
 PhysicsService:RegisterCollisionGroup("BCActors")
 PhysicsService:CollisionGroupSetCollidable("BCActors", "BCActors", false)
@@ -28,6 +30,7 @@ local function characterAdded(player, model)
 	local old = Registry.ByPlayer[player]
 	if old then Registry:Remove(old.Model) end
 	local state = Registry:Add(model, player, "Player")
+	Magic:Initialize(state)
 	for _, part in model:GetDescendants() do
 		if part:IsA("BasePart") then part.CollisionGroup = "BCActors" end
 	end
@@ -35,6 +38,7 @@ local function characterAdded(player, model)
 		if part:IsA("BasePart") then part.CollisionGroup = "BCActors" end
 	end))
 	table.insert(state.Connections, humanoid.Died:Connect(function()
+		Magic:Death(state)
 		state.Generation += 1
 		state.Blocking = false
 		state.Sprinting = false
@@ -59,6 +63,7 @@ Players.PlayerRemoving:Connect(function(player)
 	if state then Registry:Remove(state.Model) end
 	for _, connection in connections[player] or {} do connection:Disconnect() end
 	buckets[player], connections[player], fountains[player] = nil, nil, nil
+	Magic.Profiles[player] = nil
 end)
 for _, player in Players:GetPlayers() do playerAdded(player) end
 
@@ -83,6 +88,8 @@ request.OnServerEvent:Connect(function(player, action, argument)
 		state.Sprinting = argument and not state.Blocking
 		Registry:Publish(state)
 		accepted = true
+	else
+		accepted = Magic:Request(state, action, argument, now)
 	end
 	if not accepted then fx:FireClient(player, "Rejected", action) end
 end)
@@ -106,6 +113,7 @@ local publishElapsed, aiElapsed = 0, 0
 RunService.Heartbeat:Connect(function(dt)
 	local now = workspace:GetServerTimeNow()
 	Registry:Step(dt, now)
+	Magic:Step(dt, now)
 	Movement:Step(dt, now)
 	publishElapsed += dt
 	aiElapsed += dt
@@ -116,4 +124,4 @@ RunService.Heartbeat:Connect(function(dt)
 	end
 end)
 
-print("[Black Clover] Stage 1 started. Server combat, mana and movement active.")
+print("[Black Clover] Core + 7 magic classes / 44 spells initialized. Studio integration checks still required.")

@@ -1,6 +1,7 @@
 *.rbxl
 *.rbxlx
 !dist/BlackClover_Stage1.rbxlx
+!dist/BlackClover_Magic.rbxlx
 *.rbxl.lock
 *.rbxlx.lock
 *.blend
