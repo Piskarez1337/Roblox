@@ -12,6 +12,12 @@ local BoneArt = require(script.Parent.BoneAwakeningArt)
 -- Only Bone replaces the old compound art; other magic classes are untouched.
 local function cloneArmorPiece(magicId, piece)
 	if magicId == "Bone" then
+		-- Imported GLB variants use the existing ArtMeshes pipeline.
+		local meshLibrary = game:GetService("ReplicatedStorage").BlackClover:FindFirstChild("ArtMeshes")
+		if meshLibrary and meshLibrary:FindFirstChild("Bone" .. piece) then
+			return Art:Clone("Bone" .. piece)
+		end
+		-- Self-contained Studio fallback: full 3D bone art, no uploaded mesh IDs.
 		local generated = BoneArt.Build(piece)
 		return generated and Art:Track(generated) or nil
 	end
