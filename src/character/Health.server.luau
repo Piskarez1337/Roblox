@@ -1,0 +1,2 @@
+-- Health recovery is owned by Registry on the server.
+-- This named Script prevents the default Health script from doubling regeneration.

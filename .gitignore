@@ -1,0 +1,7 @@
+*.rbxl
+*.rbxlx
+!dist/BlackClover_Stage1.rbxlx
+*.rbxl.lock
+*.rbxlx.lock
+*.blend
+__pycache__/

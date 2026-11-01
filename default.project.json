@@ -1,0 +1,64 @@
+{
+  "name": "BlackClover_Stage1",
+  "tree": {
+    "$className": "DataModel",
+    "Workspace": {
+      "$properties": { "Gravity": 196.2, "FallenPartsDestroyHeight": -80, "StreamingEnabled": false },
+      "TrainingGround": { "$path": "assets/TrainingGround.rbxmx" }
+    },
+    "ReplicatedStorage": {
+      "BlackClover": {
+        "$className": "Folder",
+        "Shared": { "$path": "src/shared" },
+        "Remotes": {
+          "$className": "Folder",
+          "Action": { "$className": "RemoteEvent" },
+          "FX": { "$className": "RemoteEvent" }
+        }
+      }
+    },
+    "ServerScriptService": { "BlackCloverServer": { "$path": "src/server" } },
+    "ServerStorage": {
+      "Actors": {
+        "$className": "Folder",
+        "Dummy": { "$path": "assets/Dummy.rbxmx" },
+        "Enemy": { "$path": "assets/Enemy.rbxmx" }
+      },
+      "Stage1Tests": { "$path": "src/tests/Stage1Tests.luau" }
+    },
+    "StarterPlayer": {
+      "$properties": {
+        "LoadCharacterAppearance": false,
+        "EnableMouseLockOption": false,
+        "CameraMinZoomDistance": 6,
+        "CameraMaxZoomDistance": 26,
+        "CharacterWalkSpeed": 16,
+        "CharacterJumpPower": 48
+      },
+      "StarterCharacter": { "$path": "assets/StarterCharacter.rbxmx" },
+      "StarterPlayerScripts": { "BlackCloverClient": { "$path": "src/client" } },
+      "StarterCharacterScripts": { "$path": "src/character" }
+    },
+    "Lighting": {
+      "$properties": {
+        "Ambient": [0.34, 0.39, 0.40],
+        "OutdoorAmbient": [0.47, 0.51, 0.49],
+        "Brightness": 2.5,
+        "ClockTime": 16.4,
+        "GlobalShadows": true,
+        "EnvironmentDiffuseScale": 0.6,
+        "EnvironmentSpecularScale": 0.7
+      },
+      "Atmosphere": {
+        "$className": "Atmosphere",
+        "$properties": { "Density": 0.26, "Offset": 0.2, "Color": [0.69, 0.79, 0.77], "Decay": [0.4, 0.5, 0.54], "Haze": 1.1, "Glare": 0.14 }
+      },
+      "ColorCorrection": {
+        "$className": "ColorCorrectionEffect",
+        "$properties": { "Brightness": 0.01, "Contrast": 0.08, "Saturation": -0.07, "TintColor": [1, 0.97, 0.91] }
+      },
+      "Bloom": { "$className": "BloomEffect", "$properties": { "Intensity": 0.22, "Size": 24, "Threshold": 1.8 } }
+    },
+    "SoundService": { "$properties": { "RespectFilteringEnabled": true } }
+  }
+}
