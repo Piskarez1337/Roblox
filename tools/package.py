@@ -25,7 +25,7 @@ sources = [ROOT / name for name in (".gitattributes", ".gitignore", "default.pro
 for directory in ("src", "assets", "meshes", "docs", "tests", "tools"):
     sources.extend(p for p in (ROOT / directory).rglob("*") if p.is_file() and "__pycache__" not in p.parts)
 luau = [p for p in sources if p.suffix == ".luau"]
-assert len(luau) == 44, f"Expected 44 Luau files (42 engine + 2 CLI tests), found {len(luau)}"
+assert len(luau) == 45, f"Expected 45 Luau files (43 engine + 2 CLI tests), found {len(luau)}"
 
 archive_path = DIST / (release + ".zip")
 with zipfile.ZipFile(archive_path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
