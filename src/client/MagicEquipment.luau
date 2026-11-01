@@ -9,15 +9,56 @@ local Art = require(script.Parent.MagicArt)
 local Geometry = require(script.Parent.MagicGeometry)
 local Books = require(script.Parent.GrimoireManager)
 local BoneArt = require(script.Parent.BoneAwakeningArt)
--- Only Bone replaces the old compound art; other magic classes are untouched.
+-- Preserve the deliberately large silhouette of optional GLB parts instead of
+-- shrinking horns and wings to the old placeholder template bounding boxes.
+local boneMeshDimensions = {
+	ArmorHead = { Vector3.new(0, .60, -.06), Vector3.new(4.46, 2.40, 1.60) },
+	ArmorUpperTorso = { Vector3.new(0, 0, .035), Vector3.new(3.46, 1.83, 2.07) },
+	ArmorLowerTorso = { Vector3.new(0, -.275, -.165), Vector3.new(2.10, 1.51, 1.39) },
+	ArmorLeftUpperArm = { Vector3.new(-.115, .145, -.025), Vector3.new(1.83, 2.15, 1.37) },
+	ArmorRightUpperArm = { Vector3.new(.14, .145, -.025), Vector3.new(1.78, 2.15, 1.37) },
+	ArmorLeftLowerLeg = { Vector3.new(0, -.045, -.485), Vector3.new(1.10, 1.35, .53) },
+	ArmorRightLowerLeg = { Vector3.new(0, -.045, -.485), Vector3.new(1.10, 1.35, .53) },
+	WingLeft = { Vector3.new(-3.68, .55, .46), Vector3.new(7.60, 6.52, 1.31) },
+	WingRight = { Vector3.new(3.68, .55, .46), Vector3.new(7.60, 6.52, 1.31) },
+}
+local function cloneImportedBone(mesh, piece)
+	local bounds = boneMeshDimensions[piece]
+	if not bounds then return nil end
+	local model = Geometry.Model("Bone" .. piece)
+	local copy = mesh:Clone()
+	copy.Parent = model
+	if copy:IsA("BasePart") then
+		copy.Size = bounds[2]
+		copy.CFrame = CFrame.new(bounds[1])
+	elseif copy:IsA("Model") then
+		local _, size = copy:GetBoundingBox()
+		copy:ScaleTo(copy:GetScale() * bounds[2].Magnitude / math.max(.01, size.Magnitude))
+		local cf = copy:GetBoundingBox()
+		copy:PivotTo(CFrame.new(bounds[1] - cf.Position) * copy:GetPivot())
+	else
+		model:Destroy()
+		return nil
+	end
+	for _, descendant in model:GetDescendants() do
+		if descendant:IsA("BasePart") then
+			descendant.Anchored = true
+			descendant.Massless = true
+			descendant.CanCollide, descendant.CanTouch, descendant.CanQuery = false, false, false
+		elseif descendant:IsA("LuaSourceContainer") then
+			descendant:Destroy()
+		end
+	end
+	return Art:Track(model)
+end
+-- Other magic classes continue to use their original model definitions.
 local function cloneArmorPiece(magicId, piece)
 	if magicId == "Bone" then
-		-- Imported GLB variants use the existing ArtMeshes pipeline.
-		local meshLibrary = game:GetService("ReplicatedStorage").BlackClover:FindFirstChild("ArtMeshes")
-		if meshLibrary and meshLibrary:FindFirstChild("Bone" .. piece) then
-			return Art:Clone("Bone" .. piece)
+		local library = game:GetService("ReplicatedStorage").BlackClover:FindFirstChild("ArtMeshes")
+		local imported = library and library:FindFirstChild("Bone" .. piece)
+		if imported and (imported:IsA("Model") or imported:IsA("BasePart")) then
+			return cloneImportedBone(imported, piece)
 		end
-		-- Self-contained Studio fallback: full 3D bone art, no uploaded mesh IDs.
 		local generated = BoneArt.Build(piece)
 		return generated and Art:Track(generated) or nil
 	end
