@@ -48,7 +48,8 @@ function EnemyAI:Step(now)
 		local state = slot.State
 		if slot.Kind ~= "Enemy" or not Registry:Alive(state) or now < state.StunUntil then continue end
 		local target, distance = nil, Config.Training.EnemyAggro
-		for _, candidate in Registry.ByPlayer do
+		for _, candidate in Registry.Actors do
+			if candidate.Kind ~= "Player" and candidate.Kind ~= "Golem" then continue end
 			if not Registry:Alive(candidate) then continue end
 			if (candidate.Root.Position - slot.CFrame.Position).Magnitude > Config.Training.EnemyLeash then continue end
 			local d = (candidate.Root.Position - state.Root.Position).Magnitude

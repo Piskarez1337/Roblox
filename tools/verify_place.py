@@ -17,7 +17,7 @@ def visit(node, prefix=""):
         assert path not in paths, f"Duplicate path: {path}"
         paths[path] = obj
         # Asset models legitimately contain repeated decorative names.
-        if path in ("/Workspace", "/StarterPlayer/StarterCharacter", "/ServerStorage/Actors"):
+        if path in ("/Workspace", "/StarterPlayer/StarterCharacter", "/ServerStorage/Actors") or path.startswith("/ReplicatedStorage/BlackClover/ArtTemplates/"):
             continue
         visit(obj, path)
 
@@ -44,7 +44,7 @@ for path, (file, cls) in expected.items():
     assert source == file.read_text(), f"Changed source: {path}"
     assert len(source.encode()) < 100_000, f"Oversized module: {path}"
 
-for name in ("StarterCharacter", "Dummy", "Enemy"):
+for name in ("StarterCharacter", "Dummy", "Enemy", "Golem"):
     path = ROOT / "assets" / f"{name}.rbxmx"
     root = ET.parse(path).getroot()
     refs = {obj.attrib["referent"]: obj for obj in root.iter("Item")}
@@ -64,4 +64,20 @@ for name in ("StarterCharacter", "Dummy", "Enemy"):
     humanoid = next(obj for obj in refs.values() if obj.attrib["class"] == "Humanoid")
     assert humanoid.findtext("Properties/token[@name='RigType']") == "1"
 
-print(f"PASS: XML v4; {len(expected)} exact script sources; three connected R15 rigs; {PLACE.stat().st_size:,} bytes")
+art = ROOT / "assets" / "magic"
+models = list(art.glob("*.rbxmx"))
+assert len(models) == 43, "Missing art template"
+for file in models:
+    root = ET.parse(file).getroot()
+    items = list(root.iter("Item"))
+    refs = {obj.attrib["referent"]: obj for obj in items}
+    assert len(refs) == len(items), f"Duplicate reference: {file}"
+    model = root.find("Item")
+    assert model.attrib["class"] == "Model"
+    assert model.findtext("Properties/Ref[@name='PrimaryPart']") in refs
+    assert not any(obj.attrib["class"] in ("Script", "LocalScript", "ModuleScript") for obj in items), f"Unexpected executable art: {file}"
+    assert (ROOT / "meshes" / (file.stem + ".obj")).is_file()
+    assert (ROOT / "meshes" / (file.stem + ".mtl")).is_file()
+    assert f"/ReplicatedStorage/BlackClover/ArtTemplates/{file.stem}" in paths
+assert paths["/ReplicatedStorage/BlackClover/Remotes/MagicFX"].attrib["class"] == "RemoteEvent"
+print(f"PASS: XML v4; {len(expected)} exact script sources; four connected R15 rigs; 43 script-free art models + OBJ/MTL sources; {PLACE.stat().st_size:,} bytes")

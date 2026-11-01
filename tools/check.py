@@ -29,11 +29,12 @@ sources = sorted(ROOT.joinpath("src").rglob("*.luau")) + sorted(ROOT.joinpath("t
 for source in sources:
     run([executable("luau-compile"), str(source)], quiet=True)
 print(f"PASS: compilation of {len(sources)} Luau files")
-run([executable("luau-analyze"), "src/shared/Config.luau", "src/shared/Rules.luau", "tests/rules.spec.luau"])
+run([executable("luau-analyze"), "src/shared/Config.luau", "src/shared/Rules.luau", "src/shared/MagicConfig.luau", "src/shared/MagicRules.luau", "src/shared/SpellRegistry.luau", "tests/rules.spec.luau", "tests/magic.spec.luau"])
 print("PASS: strict analysis of engine-independent modules and rule tests")
 run([executable("luau"), "tests/rules.spec.luau"])
+run([executable("luau"), "tests/magic.spec.luau"])
 with tempfile.TemporaryDirectory(prefix="black-clover-check-") as folder:
-    place = Path(folder) / "BlackClover_Stage1.rbxlx"
+    place = Path(folder) / "BlackClover_Magic.rbxlx"
     run([executable("rojo"), "build", "default.project.json", "--output", str(place)])
     run([sys.executable, "tools/verify_place.py", str(place)])
 print("Offline checks complete. Roblox engine / Play Mode: NOT RUN.")

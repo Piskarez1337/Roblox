@@ -3,6 +3,7 @@ local CollectionService = game:GetService("CollectionService")
 local RunService = game:GetService("RunService")
 local Pose = require(game:GetService("ReplicatedStorage").BlackClover.Shared:WaitForChild("PoseLibrary"))
 local Config = require(game:GetService("ReplicatedStorage").BlackClover.Shared.Config)
+local MagicAnimation = require(script.Parent:WaitForChild("MagicAnimationController"))
 local Controller = { Actors = {}, Prediction = nil }
 
 function Controller:Add(model)
@@ -49,6 +50,7 @@ function Controller:Start()
 			entry.Phase += dt * (speed > 0.7 and speed * 0.63 or 2)
 			local airborne = humanoid.FloorMaterial == Enum.Material.Air and not root.Anchored
 			local pose = Pose.Locomotion(speed, model:GetAttribute("Sprinting") == true, airborne, entry.Phase, localVelocity)
+			pose = MagicAnimation:Stance(model, pose, speed, now)
 			local index, start = model:GetAttribute("AttackIndex") or 0, model:GetAttribute("AttackStart") or 0
 			local prediction = self.Prediction
 			if prediction and prediction.Model == model then
@@ -59,8 +61,12 @@ function Controller:Start()
 				end
 			end
 			local attack = start > 0 and Pose.Attack(index, now - start)
+			local weaponAttack = start > 0 and MagicAnimation:Melee(model, index, now - start)
+			if weaponAttack then attack = weaponAttack end
+			local casting = MagicAnimation:GetPose(model, now)
 			if humanoid.Health <= 0 then pose = {}
 			elseif (model:GetAttribute("StunUntil") or 0) > now then pose = Pose.Stagger(now - (model:GetAttribute("HitAt") or now))
+			elseif casting then pose = casting
 			elseif (model:GetAttribute("DashUntil") or 0) > now then pose = Pose.Dash()
 			elseif attack then pose = attack
 			elseif model:GetAttribute("Blocking") then pose = Pose.Block()
