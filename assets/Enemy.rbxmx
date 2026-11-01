@@ -1,0 +1,2596 @@
+<?xml version='1.0' encoding='utf-8'?>
+<roblox version="4">
+  <External>null</External>
+  <External>nil</External>
+  <Item class="Model" referent="RBX219">
+    <Properties>
+      <string name="Name">Enemy</string>
+      <Ref name="PrimaryPart">RBX220</Ref>
+    </Properties>
+    <Item class="Part" referent="RBX220">
+      <Properties>
+        <string name="Name">HumanoidRootPart</string>
+        <CoordinateFrame name="CFrame">
+          <X>0</X>
+          <Y>3</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>2</X>
+          <Y>2</Y>
+          <Z>1</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.2745098</R>
+          <G>0.345098</G>
+          <B>0.3686275</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">true</bool>
+        <bool name="CastShadow">false</bool>
+        <float name="Transparency">1</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">false</bool>
+      </Properties>
+      <Item class="Attachment" referent="RBX238">
+        <Properties>
+          <string name="Name">RootRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX221">
+      <Properties>
+        <string name="Name">LowerTorso</string>
+        <CoordinateFrame name="CFrame">
+          <X>0</X>
+          <Y>3</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>1.8</X>
+          <Y>0.8</Y>
+          <Z>1</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.2745098</R>
+          <G>0.345098</G>
+          <B>0.3686275</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">true</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">true</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="Motor6D" referent="RBX237">
+        <Properties>
+          <string name="Name">Root</string>
+          <Ref name="Part0">RBX220</Ref>
+          <CoordinateFrame name="C0">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Ref name="Part1">RBX221</Ref>
+          <CoordinateFrame name="C1">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX239">
+        <Properties>
+          <string name="Name">RootRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX241">
+        <Properties>
+          <string name="Name">WaistRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.4</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX256">
+        <Properties>
+          <string name="Name">RightHipRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0.48</X>
+            <Y>-0.35</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX274">
+        <Properties>
+          <string name="Name">LeftHipRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>-0.48</X>
+            <Y>-0.35</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX222">
+      <Properties>
+        <string name="Name">UpperTorso</string>
+        <CoordinateFrame name="CFrame">
+          <X>0</X>
+          <Y>4.05</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>2</X>
+          <Y>1.3</Y>
+          <Z>1</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.2745098</R>
+          <G>0.345098</G>
+          <B>0.3686275</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">true</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">true</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="Motor6D" referent="RBX240">
+        <Properties>
+          <string name="Name">Waist</string>
+          <Ref name="Part0">RBX221</Ref>
+          <CoordinateFrame name="C0">
+            <X>0</X>
+            <Y>0.4</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Ref name="Part1">RBX222</Ref>
+          <CoordinateFrame name="C1">
+            <X>0</X>
+            <Y>-0.65</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX242">
+        <Properties>
+          <string name="Name">WaistRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>-0.65</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX244">
+        <Properties>
+          <string name="Name">NeckRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.65</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX247">
+        <Properties>
+          <string name="Name">RightShoulderRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>1</X>
+            <Y>0.5</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX265">
+        <Properties>
+          <string name="Name">LeftShoulderRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>-1</X>
+            <Y>0.5</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX223">
+      <Properties>
+        <string name="Name">Head</string>
+        <CoordinateFrame name="CFrame">
+          <X>0</X>
+          <Y>5.25</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>1.45</X>
+          <Y>1.15</Y>
+          <Z>1.15</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.4431373</R>
+          <G>0.5098039</G>
+          <B>0.5254902</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">true</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">true</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="SpecialMesh" referent="RBX236">
+        <Properties>
+          <string name="Name">HeadMesh</string>
+          <token name="MeshType">0</token>
+          <Vector3 name="Scale">
+            <X>1</X>
+            <Y>1</Y>
+            <Z>1</Z>
+          </Vector3>
+        </Properties>
+      </Item>
+      <Item class="Motor6D" referent="RBX243">
+        <Properties>
+          <string name="Name">Neck</string>
+          <Ref name="Part0">RBX222</Ref>
+          <CoordinateFrame name="C0">
+            <X>0</X>
+            <Y>0.65</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Ref name="Part1">RBX223</Ref>
+          <CoordinateFrame name="C1">
+            <X>0</X>
+            <Y>-0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX245">
+        <Properties>
+          <string name="Name">NeckRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>-0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX224">
+      <Properties>
+        <string name="Name">RightUpperArm</string>
+        <CoordinateFrame name="CFrame">
+          <X>1.5</X>
+          <Y>4</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.9</X>
+          <Y>1.3</Y>
+          <Z>0.9</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.2745098</R>
+          <G>0.345098</G>
+          <B>0.3686275</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">true</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="Motor6D" referent="RBX246">
+        <Properties>
+          <string name="Name">RightShoulder</string>
+          <Ref name="Part0">RBX222</Ref>
+          <CoordinateFrame name="C0">
+            <X>1</X>
+            <Y>0.5</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Ref name="Part1">RBX224</Ref>
+          <CoordinateFrame name="C1">
+            <X>-0.5</X>
+            <Y>0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX248">
+        <Properties>
+          <string name="Name">RightShoulderRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>-0.5</X>
+            <Y>0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX250">
+        <Properties>
+          <string name="Name">RightElbowRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>-0.65</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX225">
+      <Properties>
+        <string name="Name">RightLowerArm</string>
+        <CoordinateFrame name="CFrame">
+          <X>1.5</X>
+          <Y>2.85</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.8</X>
+          <Y>1</Y>
+          <Z>0.8</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.4431373</R>
+          <G>0.5098039</G>
+          <B>0.5254902</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">true</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="Motor6D" referent="RBX249">
+        <Properties>
+          <string name="Name">RightElbow</string>
+          <Ref name="Part0">RBX224</Ref>
+          <CoordinateFrame name="C0">
+            <X>0</X>
+            <Y>-0.65</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Ref name="Part1">RBX225</Ref>
+          <CoordinateFrame name="C1">
+            <X>0</X>
+            <Y>0.5</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX251">
+        <Properties>
+          <string name="Name">RightElbowRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.5</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX253">
+        <Properties>
+          <string name="Name">RightWristRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>-0.5</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX226">
+      <Properties>
+        <string name="Name">RightHand</string>
+        <CoordinateFrame name="CFrame">
+          <X>1.5</X>
+          <Y>2.1</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.8</X>
+          <Y>0.5</Y>
+          <Z>0.8</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.4431373</R>
+          <G>0.5098039</G>
+          <B>0.5254902</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">true</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="Motor6D" referent="RBX252">
+        <Properties>
+          <string name="Name">RightWrist</string>
+          <Ref name="Part0">RBX225</Ref>
+          <CoordinateFrame name="C0">
+            <X>0</X>
+            <Y>-0.5</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Ref name="Part1">RBX226</Ref>
+          <CoordinateFrame name="C1">
+            <X>0</X>
+            <Y>0.25</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX254">
+        <Properties>
+          <string name="Name">RightWristRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.25</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX227">
+      <Properties>
+        <string name="Name">LeftUpperArm</string>
+        <CoordinateFrame name="CFrame">
+          <X>-1.5</X>
+          <Y>4</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.9</X>
+          <Y>1.3</Y>
+          <Z>0.9</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.2745098</R>
+          <G>0.345098</G>
+          <B>0.3686275</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">true</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="Motor6D" referent="RBX264">
+        <Properties>
+          <string name="Name">LeftShoulder</string>
+          <Ref name="Part0">RBX222</Ref>
+          <CoordinateFrame name="C0">
+            <X>-1</X>
+            <Y>0.5</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Ref name="Part1">RBX227</Ref>
+          <CoordinateFrame name="C1">
+            <X>0.5</X>
+            <Y>0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX266">
+        <Properties>
+          <string name="Name">LeftShoulderRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0.5</X>
+            <Y>0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX268">
+        <Properties>
+          <string name="Name">LeftElbowRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>-0.65</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX228">
+      <Properties>
+        <string name="Name">LeftLowerArm</string>
+        <CoordinateFrame name="CFrame">
+          <X>-1.5</X>
+          <Y>2.85</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.8</X>
+          <Y>1</Y>
+          <Z>0.8</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.4431373</R>
+          <G>0.5098039</G>
+          <B>0.5254902</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">true</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="Motor6D" referent="RBX267">
+        <Properties>
+          <string name="Name">LeftElbow</string>
+          <Ref name="Part0">RBX227</Ref>
+          <CoordinateFrame name="C0">
+            <X>0</X>
+            <Y>-0.65</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Ref name="Part1">RBX228</Ref>
+          <CoordinateFrame name="C1">
+            <X>0</X>
+            <Y>0.5</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX269">
+        <Properties>
+          <string name="Name">LeftElbowRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.5</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX271">
+        <Properties>
+          <string name="Name">LeftWristRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>-0.5</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX229">
+      <Properties>
+        <string name="Name">LeftHand</string>
+        <CoordinateFrame name="CFrame">
+          <X>-1.5</X>
+          <Y>2.1</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.8</X>
+          <Y>0.5</Y>
+          <Z>0.8</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.4431373</R>
+          <G>0.5098039</G>
+          <B>0.5254902</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">true</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="Motor6D" referent="RBX270">
+        <Properties>
+          <string name="Name">LeftWrist</string>
+          <Ref name="Part0">RBX228</Ref>
+          <CoordinateFrame name="C0">
+            <X>0</X>
+            <Y>-0.5</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Ref name="Part1">RBX229</Ref>
+          <CoordinateFrame name="C1">
+            <X>0</X>
+            <Y>0.25</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX272">
+        <Properties>
+          <string name="Name">LeftWristRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.25</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX230">
+      <Properties>
+        <string name="Name">RightUpperLeg</string>
+        <CoordinateFrame name="CFrame">
+          <X>0.48</X>
+          <Y>2.1</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.85</X>
+          <Y>1.1</Y>
+          <Z>0.85</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.2745098</R>
+          <G>0.345098</G>
+          <B>0.3686275</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">true</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="Motor6D" referent="RBX255">
+        <Properties>
+          <string name="Name">RightHip</string>
+          <Ref name="Part0">RBX221</Ref>
+          <CoordinateFrame name="C0">
+            <X>0.48</X>
+            <Y>-0.35</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Ref name="Part1">RBX230</Ref>
+          <CoordinateFrame name="C1">
+            <X>0</X>
+            <Y>0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX257">
+        <Properties>
+          <string name="Name">RightHipRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX259">
+        <Properties>
+          <string name="Name">RightKneeRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>-0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX231">
+      <Properties>
+        <string name="Name">RightLowerLeg</string>
+        <CoordinateFrame name="CFrame">
+          <X>0.48</X>
+          <Y>1</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.8</X>
+          <Y>1.1</Y>
+          <Z>0.8</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.2745098</R>
+          <G>0.345098</G>
+          <B>0.3686275</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">true</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="Motor6D" referent="RBX258">
+        <Properties>
+          <string name="Name">RightKnee</string>
+          <Ref name="Part0">RBX230</Ref>
+          <CoordinateFrame name="C0">
+            <X>0</X>
+            <Y>-0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Ref name="Part1">RBX231</Ref>
+          <CoordinateFrame name="C1">
+            <X>0</X>
+            <Y>0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX260">
+        <Properties>
+          <string name="Name">RightKneeRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX262">
+        <Properties>
+          <string name="Name">RightAnkleRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>-0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX232">
+      <Properties>
+        <string name="Name">RightFoot</string>
+        <CoordinateFrame name="CFrame">
+          <X>0.48</X>
+          <Y>0.25</Y>
+          <Z>-0.12</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.85</X>
+          <Y>0.5</Y>
+          <Z>1.15</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.1411765</R>
+          <G>0.1607843</G>
+          <B>0.1764706</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">true</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="Motor6D" referent="RBX261">
+        <Properties>
+          <string name="Name">RightAnkle</string>
+          <Ref name="Part0">RBX231</Ref>
+          <CoordinateFrame name="C0">
+            <X>0</X>
+            <Y>-0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Ref name="Part1">RBX232</Ref>
+          <CoordinateFrame name="C1">
+            <X>0</X>
+            <Y>0.2</Y>
+            <Z>0.12</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX263">
+        <Properties>
+          <string name="Name">RightAnkleRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.2</Y>
+            <Z>0.12</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX233">
+      <Properties>
+        <string name="Name">LeftUpperLeg</string>
+        <CoordinateFrame name="CFrame">
+          <X>-0.48</X>
+          <Y>2.1</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.85</X>
+          <Y>1.1</Y>
+          <Z>0.85</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.2745098</R>
+          <G>0.345098</G>
+          <B>0.3686275</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">true</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="Motor6D" referent="RBX273">
+        <Properties>
+          <string name="Name">LeftHip</string>
+          <Ref name="Part0">RBX221</Ref>
+          <CoordinateFrame name="C0">
+            <X>-0.48</X>
+            <Y>-0.35</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Ref name="Part1">RBX233</Ref>
+          <CoordinateFrame name="C1">
+            <X>0</X>
+            <Y>0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX275">
+        <Properties>
+          <string name="Name">LeftHipRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX277">
+        <Properties>
+          <string name="Name">LeftKneeRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>-0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX234">
+      <Properties>
+        <string name="Name">LeftLowerLeg</string>
+        <CoordinateFrame name="CFrame">
+          <X>-0.48</X>
+          <Y>1</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.8</X>
+          <Y>1.1</Y>
+          <Z>0.8</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.2745098</R>
+          <G>0.345098</G>
+          <B>0.3686275</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">true</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="Motor6D" referent="RBX276">
+        <Properties>
+          <string name="Name">LeftKnee</string>
+          <Ref name="Part0">RBX233</Ref>
+          <CoordinateFrame name="C0">
+            <X>0</X>
+            <Y>-0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Ref name="Part1">RBX234</Ref>
+          <CoordinateFrame name="C1">
+            <X>0</X>
+            <Y>0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX278">
+        <Properties>
+          <string name="Name">LeftKneeRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX280">
+        <Properties>
+          <string name="Name">LeftAnkleRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>-0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX235">
+      <Properties>
+        <string name="Name">LeftFoot</string>
+        <CoordinateFrame name="CFrame">
+          <X>-0.48</X>
+          <Y>0.25</Y>
+          <Z>-0.12</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.85</X>
+          <Y>0.5</Y>
+          <Z>1.15</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.1411765</R>
+          <G>0.1607843</G>
+          <B>0.1764706</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">true</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="Motor6D" referent="RBX279">
+        <Properties>
+          <string name="Name">LeftAnkle</string>
+          <Ref name="Part0">RBX234</Ref>
+          <CoordinateFrame name="C0">
+            <X>0</X>
+            <Y>-0.55</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <Ref name="Part1">RBX235</Ref>
+          <CoordinateFrame name="C1">
+            <X>0</X>
+            <Y>0.2</Y>
+            <Z>0.12</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+      <Item class="Attachment" referent="RBX281">
+        <Properties>
+          <string name="Name">LeftAnkleRigAttachment</string>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>0.2</Y>
+            <Z>0.12</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Humanoid" referent="RBX282">
+      <Properties>
+        <string name="Name">Humanoid</string>
+        <token name="RigType">1</token>
+        <float name="HipHeight">2</float>
+        <float name="MaxHealth">120</float>
+        <float name="Health">120</float>
+        <bool name="AutomaticScalingEnabled">false</bool>
+        <bool name="BreakJointsOnDeath">false</bool>
+        <float name="NameDisplayDistance">35</float>
+        <float name="HealthDisplayDistance">55</float>
+        <string name="DisplayName">Часовой</string>
+      </Properties>
+      <Item class="Animator" referent="RBX283">
+        <Properties>
+          <string name="Name">Animator</string>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX284">
+      <Properties>
+        <string name="Name">WovenBelt</string>
+        <CoordinateFrame name="CFrame">
+          <X>0</X>
+          <Y>3.18</Y>
+          <Z>-0.53</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>1.88</X>
+          <Y>0.22</Y>
+          <Z>0.1</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.8862745</R>
+          <G>0.4901961</G>
+          <B>0.3568627</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">false</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="WeldConstraint" referent="RBX285">
+        <Properties>
+          <string name="Name">DetailWeld</string>
+          <Ref name="Part0">RBX221</Ref>
+          <Ref name="Part1">RBX284</Ref>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX286">
+      <Properties>
+        <string name="Name">LapelLeft</string>
+        <CoordinateFrame name="CFrame">
+          <X>-0.3</X>
+          <Y>4.2</Y>
+          <Z>-0.54</Z>
+          <R00>0.9610554</R00>
+          <R01>0.2763556</R01>
+          <R02>0</R02>
+          <R10>-0.2763556</R10>
+          <R11>0.9610554</R11>
+          <R12>-0</R12>
+          <R20>-0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.12</X>
+          <Y>1</Y>
+          <Z>0.08</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.8862745</R>
+          <G>0.4901961</G>
+          <B>0.3568627</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">false</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="WeldConstraint" referent="RBX287">
+        <Properties>
+          <string name="Name">DetailWeld</string>
+          <Ref name="Part0">RBX222</Ref>
+          <Ref name="Part1">RBX286</Ref>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX288">
+      <Properties>
+        <string name="Name">LapelRight</string>
+        <CoordinateFrame name="CFrame">
+          <X>0.3</X>
+          <Y>4.2</Y>
+          <Z>-0.54</Z>
+          <R00>0.9610554</R00>
+          <R01>-0.2763556</R01>
+          <R02>0</R02>
+          <R10>0.2763556</R10>
+          <R11>0.9610554</R11>
+          <R12>-0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.12</X>
+          <Y>1</Y>
+          <Z>0.08</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.8862745</R>
+          <G>0.4901961</G>
+          <B>0.3568627</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">false</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="WeldConstraint" referent="RBX289">
+        <Properties>
+          <string name="Name">DetailWeld</string>
+          <Ref name="Part0">RBX222</Ref>
+          <Ref name="Part1">RBX288</Ref>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX290">
+      <Properties>
+        <string name="Name">CloverPin</string>
+        <CoordinateFrame name="CFrame">
+          <X>0.49</X>
+          <Y>4.38</Y>
+          <Z>-0.58</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.14</X>
+          <Y>0.14</Y>
+          <Z>0.055</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.8862745</R>
+          <G>0.4901961</G>
+          <B>0.3568627</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">false</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <token name="shape">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="WeldConstraint" referent="RBX291">
+        <Properties>
+          <string name="Name">DetailWeld</string>
+          <Ref name="Part0">RBX222</Ref>
+          <Ref name="Part1">RBX290</Ref>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX292">
+      <Properties>
+        <string name="Name">CloverPin</string>
+        <CoordinateFrame name="CFrame">
+          <X>0.65</X>
+          <Y>4.38</Y>
+          <Z>-0.58</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.14</X>
+          <Y>0.14</Y>
+          <Z>0.055</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.8862745</R>
+          <G>0.4901961</G>
+          <B>0.3568627</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">false</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <token name="shape">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="WeldConstraint" referent="RBX293">
+        <Properties>
+          <string name="Name">DetailWeld</string>
+          <Ref name="Part0">RBX222</Ref>
+          <Ref name="Part1">RBX292</Ref>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX294">
+      <Properties>
+        <string name="Name">CloverPin</string>
+        <CoordinateFrame name="CFrame">
+          <X>0.57</X>
+          <Y>4.47</Y>
+          <Z>-0.58</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.14</X>
+          <Y>0.14</Y>
+          <Z>0.055</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.8862745</R>
+          <G>0.4901961</G>
+          <B>0.3568627</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">false</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <token name="shape">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="WeldConstraint" referent="RBX295">
+        <Properties>
+          <string name="Name">DetailWeld</string>
+          <Ref name="Part0">RBX222</Ref>
+          <Ref name="Part1">RBX294</Ref>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX296">
+      <Properties>
+        <string name="Name">CloverPin</string>
+        <CoordinateFrame name="CFrame">
+          <X>0.57</X>
+          <Y>4.29</Y>
+          <Z>-0.58</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.14</X>
+          <Y>0.14</Y>
+          <Z>0.055</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.8862745</R>
+          <G>0.4901961</G>
+          <B>0.3568627</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">false</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <token name="shape">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="WeldConstraint" referent="RBX297">
+        <Properties>
+          <string name="Name">DetailWeld</string>
+          <Ref name="Part0">RBX222</Ref>
+          <Ref name="Part1">RBX296</Ref>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX298">
+      <Properties>
+        <string name="Name">WristWrap</string>
+        <CoordinateFrame name="CFrame">
+          <X>1.5</X>
+          <Y>2.5</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.85</X>
+          <Y>0.22</Y>
+          <Z>0.85</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.8862745</R>
+          <G>0.4901961</G>
+          <B>0.3568627</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">false</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="WeldConstraint" referent="RBX299">
+        <Properties>
+          <string name="Name">DetailWeld</string>
+          <Ref name="Part0">RBX225</Ref>
+          <Ref name="Part1">RBX298</Ref>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX300">
+      <Properties>
+        <string name="Name">ShoulderTrim</string>
+        <CoordinateFrame name="CFrame">
+          <X>1.5</X>
+          <Y>4.5</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.94</X>
+          <Y>0.16</Y>
+          <Z>0.94</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.8862745</R>
+          <G>0.4901961</G>
+          <B>0.3568627</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">false</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="WeldConstraint" referent="RBX301">
+        <Properties>
+          <string name="Name">DetailWeld</string>
+          <Ref name="Part0">RBX224</Ref>
+          <Ref name="Part1">RBX300</Ref>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX302">
+      <Properties>
+        <string name="Name">Eye</string>
+        <CoordinateFrame name="CFrame">
+          <X>0.28</X>
+          <Y>5.28</Y>
+          <Z>-0.565</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.2</X>
+          <Y>0.19</Y>
+          <Z>0.055</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.07843137</R>
+          <G>0.1372549</G>
+          <B>0.1529412</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">false</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <token name="shape">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="WeldConstraint" referent="RBX303">
+        <Properties>
+          <string name="Name">DetailWeld</string>
+          <Ref name="Part0">RBX223</Ref>
+          <Ref name="Part1">RBX302</Ref>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX304">
+      <Properties>
+        <string name="Name">Iris</string>
+        <CoordinateFrame name="CFrame">
+          <X>0.28</X>
+          <Y>5.28</Y>
+          <Z>-0.6</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.08</X>
+          <Y>0.13</Y>
+          <Z>0.035</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.8862745</R>
+          <G>0.4901961</G>
+          <B>0.3568627</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">false</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <token name="shape">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="WeldConstraint" referent="RBX305">
+        <Properties>
+          <string name="Name">DetailWeld</string>
+          <Ref name="Part0">RBX223</Ref>
+          <Ref name="Part1">RBX304</Ref>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX306">
+      <Properties>
+        <string name="Name">Brow</string>
+        <CoordinateFrame name="CFrame">
+          <X>0.28</X>
+          <Y>5.48</Y>
+          <Z>-0.55</Z>
+          <R00>0.9887711</R00>
+          <R01>0.1494381</R01>
+          <R02>0</R02>
+          <R10>-0.1494381</R10>
+          <R11>0.9887711</R11>
+          <R12>-0</R12>
+          <R20>-0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.28</X>
+          <Y>0.065</Y>
+          <Z>0.06</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.1568627</R>
+          <G>0.1529412</G>
+          <B>0.145098</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">false</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="WeldConstraint" referent="RBX307">
+        <Properties>
+          <string name="Name">DetailWeld</string>
+          <Ref name="Part0">RBX223</Ref>
+          <Ref name="Part1">RBX306</Ref>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX308">
+      <Properties>
+        <string name="Name">WristWrap</string>
+        <CoordinateFrame name="CFrame">
+          <X>-1.5</X>
+          <Y>2.5</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.85</X>
+          <Y>0.22</Y>
+          <Z>0.85</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.8862745</R>
+          <G>0.4901961</G>
+          <B>0.3568627</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">false</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="WeldConstraint" referent="RBX309">
+        <Properties>
+          <string name="Name">DetailWeld</string>
+          <Ref name="Part0">RBX228</Ref>
+          <Ref name="Part1">RBX308</Ref>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX310">
+      <Properties>
+        <string name="Name">ShoulderTrim</string>
+        <CoordinateFrame name="CFrame">
+          <X>-1.5</X>
+          <Y>4.5</Y>
+          <Z>0</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.94</X>
+          <Y>0.16</Y>
+          <Z>0.94</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.8862745</R>
+          <G>0.4901961</G>
+          <B>0.3568627</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">false</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="WeldConstraint" referent="RBX311">
+        <Properties>
+          <string name="Name">DetailWeld</string>
+          <Ref name="Part0">RBX227</Ref>
+          <Ref name="Part1">RBX310</Ref>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX312">
+      <Properties>
+        <string name="Name">Eye</string>
+        <CoordinateFrame name="CFrame">
+          <X>-0.28</X>
+          <Y>5.28</Y>
+          <Z>-0.565</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.2</X>
+          <Y>0.19</Y>
+          <Z>0.055</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.07843137</R>
+          <G>0.1372549</G>
+          <B>0.1529412</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">false</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <token name="shape">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="WeldConstraint" referent="RBX313">
+        <Properties>
+          <string name="Name">DetailWeld</string>
+          <Ref name="Part0">RBX223</Ref>
+          <Ref name="Part1">RBX312</Ref>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX314">
+      <Properties>
+        <string name="Name">Iris</string>
+        <CoordinateFrame name="CFrame">
+          <X>-0.28</X>
+          <Y>5.28</Y>
+          <Z>-0.6</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.08</X>
+          <Y>0.13</Y>
+          <Z>0.035</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.8862745</R>
+          <G>0.4901961</G>
+          <B>0.3568627</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">false</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <token name="shape">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="WeldConstraint" referent="RBX315">
+        <Properties>
+          <string name="Name">DetailWeld</string>
+          <Ref name="Part0">RBX223</Ref>
+          <Ref name="Part1">RBX314</Ref>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX316">
+      <Properties>
+        <string name="Name">Brow</string>
+        <CoordinateFrame name="CFrame">
+          <X>-0.28</X>
+          <Y>5.48</Y>
+          <Z>-0.55</Z>
+          <R00>0.9887711</R00>
+          <R01>-0.1494381</R01>
+          <R02>0</R02>
+          <R10>0.1494381</R10>
+          <R11>0.9887711</R11>
+          <R12>-0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.28</X>
+          <Y>0.065</Y>
+          <Z>0.06</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.1568627</R>
+          <G>0.1529412</G>
+          <B>0.145098</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">false</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="WeldConstraint" referent="RBX317">
+        <Properties>
+          <string name="Name">DetailWeld</string>
+          <Ref name="Part0">RBX223</Ref>
+          <Ref name="Part1">RBX316</Ref>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Part" referent="RBX318">
+      <Properties>
+        <string name="Name">Mouth</string>
+        <CoordinateFrame name="CFrame">
+          <X>0</X>
+          <Y>4.99</Y>
+          <Z>-0.57</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <Vector3 name="size">
+          <X>0.19</X>
+          <Y>0.035</Y>
+          <Z>0.03</Z>
+        </Vector3>
+        <Color3 name="Color">
+          <R>0.3647059</R>
+          <G>0.2588235</G>
+          <B>0.2392157</B>
+        </Color3>
+        <token name="Material">272</token>
+        <bool name="Anchored">false</bool>
+        <bool name="CanCollide">false</bool>
+        <bool name="CanTouch">false</bool>
+        <bool name="CanQuery">false</bool>
+        <bool name="CastShadow">true</bool>
+        <float name="Transparency">0</float>
+        <token name="TopSurface">0</token>
+        <token name="BottomSurface">0</token>
+        <bool name="Massless">true</bool>
+      </Properties>
+      <Item class="WeldConstraint" referent="RBX319">
+        <Properties>
+          <string name="Name">DetailWeld</string>
+          <Ref name="Part0">RBX223</Ref>
+          <Ref name="Part1">RBX318</Ref>
+        </Properties>
+      </Item>
+    </Item>
+  </Item>
+</roblox>

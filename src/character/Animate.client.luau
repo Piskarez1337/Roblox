@@ -1,0 +1,2 @@
+-- Character motion is rendered by AnimationController for every BCActor.
+-- This named LocalScript prevents Roblox from adding the default Animate script.
